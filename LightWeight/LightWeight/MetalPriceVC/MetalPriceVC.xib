@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MetalPriceVC" customModule="LightWeight" customModuleProvider="target">
+            <connections>
+                <outlet property="NavView" destination="baJ-lX-b1x" id="R5r-4T-OoR"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1HB-Ev-PKb">
+                    <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="baJ-lX-b1x" customClass="NavView" customModule="LightWeight" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="393" height="70"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="70" id="Cf3-Mq-Oux"/>
+                            </constraints>
+                        </view>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="GoldJwelImg" translatesAutoresizingMaskIntoConstraints="NO" id="ptb-cI-HqC">
+                            <rect key="frame" x="96.666666666666686" y="110" width="200" height="200"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="200" id="aJM-rk-txL"/>
+                                <constraint firstAttribute="height" constant="200" id="aem-bz-Q6M"/>
+                            </constraints>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="baJ-lX-b1x" secondAttribute="trailing" id="30l-cR-MRj"/>
+                        <constraint firstItem="ptb-cI-HqC" firstAttribute="centerX" secondItem="1HB-Ev-PKb" secondAttribute="centerX" id="dBk-2z-3b3"/>
+                        <constraint firstItem="baJ-lX-b1x" firstAttribute="top" secondItem="1HB-Ev-PKb" secondAttribute="top" id="gxk-Bb-8MK"/>
+                        <constraint firstItem="baJ-lX-b1x" firstAttribute="leading" secondItem="1HB-Ev-PKb" secondAttribute="leading" id="iKU-A7-bWj"/>
+                        <constraint firstItem="ptb-cI-HqC" firstAttribute="top" secondItem="baJ-lX-b1x" secondAttribute="bottom" constant="40" id="qDz-q3-VPT"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="1HB-Ev-PKb" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="2DP-UH-iae"/>
+                <constraint firstItem="1HB-Ev-PKb" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="FT9-OK-KIH"/>
+                <constraint firstItem="1HB-Ev-PKb" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="UjD-N7-WjU"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="1HB-Ev-PKb" secondAttribute="bottom" id="jXO-m4-MY4"/>
+            </constraints>
+            <point key="canvasLocation" x="-60.305343511450381" y="19.718309859154932"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="GoldJwelImg" width="200" height="200"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
