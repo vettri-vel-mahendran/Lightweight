@@ -15,10 +15,13 @@ struct User: Decodable {
 class MetalPriceVC: UIViewController {
     
     @IBOutlet weak var NavView: NavView!
+    @IBOutlet weak var popUpButtonStates: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         ConfigNavView()
+        
+        setPopUpButton()
         
         let urlstr = ""
         URLSessionManger.shared.request(urlstr, method: .get) { (result: Result<[User], Error>) in
@@ -37,5 +40,32 @@ class MetalPriceVC: UIViewController {
             self.navigationController?.popViewController(animated: true)
         }
     }
-    
+   
+    func setPopUpButton(){
+        
+        // Here are my Array with countries name. It's works fine.
+        let countries = ["INd", "feve", "efvef", "erev", "efvef"]
+        
+        let optionClosure = {(action: UIAction) in
+            print(action.title)
+        }
+        
+        for country in countries{
+        UIAction(title: country, state: .off, handler: optionClosure)
+        }
+
+        
+        // In this part I want to fetch the countries array. Now it's a static menu!
+        popUpButtonStates.menu = UIMenu(children: [
+            UIAction(title: "Country 1", state: .off, handler: optionClosure),
+            UIAction(title: "Country 2", state: .on, handler: optionClosure),
+            UIAction(title: "Country 3", state: .off, handler: optionClosure),
+            UIAction(title: "Country 4", state: .off , handler: optionClosure)
+        ])
+        
+        popUpButtonStates.showsMenuAsPrimaryAction = true
+        popUpButtonStates.changesSelectionAsPrimaryAction = true
+        
+    }
 }
+
